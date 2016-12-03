@@ -22,5 +22,12 @@ for (lakenumber in 1:length(lakeids)){
 }
 
 # Example plot Lake Mendota and Lake Monona nitrate 
+par(pch=16)
 plot(lakelist$ME$sampledate, lakelist$ME$no3no2_sloh, col="blue")
 points(lakelist$MO$sampledate, lakelist$MO$no3no2_sloh, col="red")
+
+# Example plot Lake Mendota and Lake Monona nitrate with connected lines
+plot(no3no2_sloh~sampledate, data=lakelist$ME[!is.na(lakelist$ME$no3no2_sloh),], col="blue", type="o")
+points(no3no2_sloh~sampledate, data=lakelist$MO[!is.na(lakelist$MO$no3no2_sloh),], col="red", type="o")
+legend('topleft', inset=0.02, c('Mendota', 'Monona'), col=c('blue', 'red'), pch=16, bty="n")
+
