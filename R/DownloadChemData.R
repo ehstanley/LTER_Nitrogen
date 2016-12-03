@@ -212,3 +212,6 @@ detach(dt1)
 
 # Save as rds file to Data directory
 saveRDS(dt1, 'Data/NTL_ChemicalLimnology.rds')
+
+# Save as csv file for easy sharing
+write.table(dt1, file='Data/NTL_ChemicalLimnology.csv', sep=",")
