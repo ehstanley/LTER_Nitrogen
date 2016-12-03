@@ -210,5 +210,5 @@ summary(flagdrsif_sloh)
 detach(dt1)               
 
 
-
-
+# Save as rds file to Data directory
+saveRDS(dt1, 'Data/NTL_ChemicalLimnology.rds')
