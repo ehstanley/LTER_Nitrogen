@@ -17,6 +17,8 @@ list2env(lakelist, envir=.GlobalEnv)
 
 # Example plot Lake Mendota and Lake Monona nitrate with connected lines
 par(pch=16)
+par(mar = c(3,3,0.2,1),mgp=c(1,0.2,0),tck=-0.02)
+
 plot(no3no2_sloh~sampledate, data=lakelist$ME[!is.na(lakelist$ME$no3no2_sloh),], col="blue", type="o")
 points(no3no2_sloh~sampledate, data=lakelist$MO[!is.na(lakelist$MO$no3no2_sloh),], col="red", type="o")
 legend('topleft', inset=0.02, c('Mendota', 'Monona'), col=c('blue', 'red'), pch=16, bty="n")
