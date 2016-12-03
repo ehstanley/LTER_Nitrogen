@@ -7,20 +7,13 @@ head(chemdata)
 str(chemdata)
 chemdata$lakeid<-as.character(chemdata$lakeid)
 
-lakeids<-as.character(unique(chemdata$lakeid))
-
-# Loop through chem data and subset based on lakeids
 # Create a list of dataframes for each NTL-Lake
 # Example: Lake Mendota dataframe can be called with 'lakelist$ME'
+lakelist<-split(chemdata, chemdata$lakeid)
 
-lakelist<-list()
-lakenumber<-1
-for (lakenumber in 1:length(lakeids)){
-  lakedata<-chemdata[chemdata$lakeid==lakeids[lakenumber],]
-  lakelist[[lakenumber]]<-lakedata
-  names(lakelist)[[lakenumber]]<-lakeids[lakenumber]
-}
-
+# or make each lake it's own df in the global environment
+# Lake Mendota can now be called with 'ME'
+list2env(lakelist, envir=.GlobalEnv)
 
 # Example plot Lake Mendota and Lake Monona nitrate with connected lines
 par(pch=16)
