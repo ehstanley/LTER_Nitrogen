@@ -1,4 +1,9 @@
-# Code to download NTL-LTER chemical limnology
+# ###################################################################
+# Download NTL-LTER chemical limnology of primary study lakes
+# LakeIDs indiate lake name
+# data are stored as a dataframe entitled 'dt1'
+# ###################################################################
+
 
 # Package ID: knb-lter-ntl.1.12 Cataloging System:https://pasta.lternet.edu.
 # Data set title: North Temperate Lakes LTER: Chemical Limnology of Primary Study Lakes: Nutrients, pH and Carbon 1981 - current.
