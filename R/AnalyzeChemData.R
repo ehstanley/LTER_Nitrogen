@@ -1,5 +1,7 @@
 # ################################################
 # Load chemistry data to start analysis
+# Plot timeseries of NO3, NH4, kjdl_N in Lake Mendota (surface and hypo)
+# Plot timeseries of NO3 in Mendota, Monona, Wingra, and trout
 # ################################################
 
 library(RColorBrewer)
@@ -34,7 +36,7 @@ axis(1, at=seq.Date(as.Date('1950-01-01'), as.Date('2020-01-01'), by='year'), la
 
 dev.off()
 
-# Example plot Lake Mendota nitrate and ammonium with connected lines
+# Example plot Lake Mendota nitrate and ammonium with connected lines (surface)
 png('Figures/MendotaTimeSeries_NO3_NH4.png', width=13, height=4, units='in', res=200, bg=NA)
 par(pch=16)
 par(ps=14)
