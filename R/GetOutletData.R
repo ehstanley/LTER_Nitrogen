@@ -10,7 +10,7 @@ library(dataRetrieval)
 # Set NWIS codes for Yahara River discharge at Main St (Madison, WI)
 MendotaOut<-c("05428500")
 ParameterCd <- c("00060") # Discharge
-StartDate <- "2010-01-01"
+StartDate <- "1995-01-01"
 EndDate <- "2016-12-31"
 
 # Assess NWIS Data available
