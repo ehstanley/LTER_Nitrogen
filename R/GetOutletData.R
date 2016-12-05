@@ -1,8 +1,7 @@
-# ##########################################################
-# Code to calculate N transport out of Lake Mendota
-# Use discharge data from Yahara River at Main St in Madison
-# Use concentration data from Lake Mendota buoy
-# ##########################################################
+# ##################################################################################
+# Get discharge data from Yahara River at Main St in Madison
+# Use this data with concentration data from Lake Mendota buoy to calculate N export
+# ##################################################################################
 
 #install packages
 library(dataRetrieval)
